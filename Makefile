@@ -12,11 +12,11 @@ SECRET_FOLDER=secret/
 INSTALL_FOLDER=/secret/$(SERVICE_NAME)/
 
 DOCKER_FILE=-f $(DOCKER_FOLDER)docker-compose.yml -f $(INSTALL_FOLDER)compose-secret.yml
-DOCKER_COMMAND= $(ENV) docker compose -p $(SERVICE_NAME) $(DOCKER_FILE)
+DOCKER_COMMAND= $(ENV) docker compose -p vaulwarden $(DOCKER_FILE)
 
 install:
 	@mkdir -p $(INSTALL_FOLDER)
 	@cp -R $(SECRET_FOLDER)/* $(INSTALL_FOLDER)
 
 start:
-	$(DOCKER_COMMAND) --env-file docker/.local up -d --pull always
+	$(DOCKER_COMMAND) --env-file docker/local.env up -d --pull always

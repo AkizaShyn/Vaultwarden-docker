@@ -1,5 +1,0 @@
-DOMAIN=https://vault.kweber.fr
-ADMIN_TOKEN=11$bXFKTHJsSS9LNWRTTm16KzdNR0FIb2ZPdDBjRkF4aXQ5Mk8rbE5kR25YZz0$4oIUbct7txtlDbCf7Rux11OiBjfe7VY3W1f/kI+u9Fc
-SMTP_HOST=smtp.ionos.fr
-SMTP_FROM=serveur@datashyn.fr
-SMTP_USERNAME=serveur@datashyn.fr
