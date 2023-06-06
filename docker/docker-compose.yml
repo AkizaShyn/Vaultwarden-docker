@@ -6,7 +6,7 @@ services:
     image: vaultwarden/server:latest
     restart: unless-stopped
     volumes:
-      - ./data/:/data/
+      - Vaultwarden_data:/data/
     ports:
       - 7894:80
     environment:
@@ -30,3 +30,7 @@ services:
       - SMTP_PORT=587
       - SMTP_USERNAME=${SMTP_USERNAME}
       - SMTP_AUTH_MECHANISM="login"
+volumes:
+    Vaultwarden_data:
+networks:
+    vaulwarden_network:
